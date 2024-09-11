@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Displacement Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <section class="title">
+            <h1>Game geser geser</h1>
+        </section>
+        <div id="chara"></div>
+        <section class="counting">
+            <div class="count">pergerakan : 0</div>
+            <button id="resetButton">Reset Count</button>
+        </section>
+        <section class="button">
+            <div class="buttonList">
+                <div class="buttonListR">
+                    <button class="left">&larr;</button>
+                </div>
+                <div class="buttonListTB">
+                    <button class="top">&uarr;</button>
+                    <button class="bottom">&darr;</button>
+                </div>
+
+                <div class="buttonListR">
+                    <button class="right">&rarr;</button>
+                </div>
+            </div>
+            <div class="sound">
+                <button class="special" onclick=playSoundSpecial()>Special Sound</button>
+            </div>
+        </section>
+    </div>
+    <!-- <p>tekan huruf "s" untuk sound spesial</p> -->
+</body>
+<script src="main.js"></script>
+
+</html>

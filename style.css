@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+.count {
+  font-size: 1.5rem;
+  color: rgb(231, 253, 253);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+#resetButton {
+  margin: 1em;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  color: white;
+  background-color: #ff4d4d;
+  /* Warna merah */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+#resetButton:hover {
+  background-color: #ff1a1a;
+  /* Warna merah lebih gelap saat hover */
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  background-image: linear-gradient(to right top,
+      #051937,
+      #004d7a,
+      #008793,
+      #00bf72,
+      #a8eb12);
+  animation: foto 10s ease-in-out infinite;
+}
+
+.container .title {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 5rem;
+  text-transform: capitalize;
+  color: rgb(231, 253, 253);
+  text-shadow: 2px 2px black;
+  text-decoration: underline #694f8e;
+}
+
+.container #chara {
+  z-index: 20;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: url(img/kucing.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+section.button {
+  position: relative;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.buttonList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+}
+
+.right,
+.top,
+.bottom,
+.left {
+  width: 2em;
+  height: 2.5em;
+  font-size: 2rem;
+  margin: 1px;
+}
+
+.right,
+.left {
+  width: 4em;
+  height: 5em;
+}
+
+.buttonListTB {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .sound {
+  width: 100%;
+} */
+
+.special {
+  font-size: 1rem;
+}
+
+@keyframes foto {
+  0% {
+    background-image: linear-gradient(to right,
+        #051937,
+        #004d7a,
+        #008793,
+        #00bf72,
+        #a8eb12);
+    background-size: cover;
+    background-blend-mode: darken;
+  }
+
+  25% {
+    background-image: linear-gradient(to right bottom,
+        #051937,
+        #004d7a,
+        #008793,
+        #00bf72,
+        #a8eb12);
+    background-size: cover;
+    background-blend-mode: darken;
+  }
+
+  50% {
+    background-image: linear-gradient(to bottom,
+        #051937,
+        #004d7a,
+        #008793,
+        #00bf72,
+        #a8eb12);
+    background-size: cover;
+    background-blend-mode: darken;
+  }
+
+  100% {
+    background-image: linear-gradient(to left bottom,
+        #051937,
+        #004d7a,
+        #008793,
+        #00bf72,
+        #a8eb12);
+    background-size: cover;
+    background-blend-mode: darken;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container .title {
+    font-size: 2rem;
+  }
+
+  .container #chara {
+    width: 150px;
+    height: 150px;
+    top: 20%;
+    right: 35%;
+  }
+
+  .counting {
+    position: fixed;
+    top: 1;
+    right: 0;
+    z-index: 999999999;
+  }
+}
